@@ -6,8 +6,9 @@ library(textreuse)
 library(parallel)
 
 #Subset of annotated clusters
+args=(commandArgs(TRUE))
 
-cluster_annot <- fread("data/pro_pang_gc_annot_cvl_all.tsv, stringsAsFactors = F, header = F) %>%
+cluster_annot <- fread(args[1], stringsAsFactors = F, header = F) %>%
   setNames(c("rep","memb","pf","acc","clan","partial")) %>%
   dplyr::select(rep,memb,partial,pf,clan)
 
@@ -123,4 +124,4 @@ res.parsed.2 <- results %>% select(rep,jacc_median_raw,jacc_median_sc,type,prop_
   filter(jacc_median_raw==max(jacc_median_raw)) %>% group_by(rep) %>% slice(1)
 
 shingl_jacc.res <- rbind(res.parsed.1,res.parsed.2) %>% select(-count)
-write.table(shingl_jacc.res, "results/pro_pan_gc_func_eval.tsv",col.names=T,row.names=F,sep="\t",quote=F)
+write.table(shingl_jacc.res, args[2],col.names=T,row.names=F,sep="\t",quote=F)
