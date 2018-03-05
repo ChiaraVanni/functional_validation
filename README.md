@@ -7,18 +7,14 @@ Validation of clusters annotated to Pfam domains, in terms of intra-cluster func
 <img src="https://github.com/ChiaraVanni/functional_validation/blob/master/img/jacc_pipeline.jpeg" width=700>
 
 #### R required packages:
-
+```r
 tidyverse
-
 data.table
-
 proxy
-
 stringr
-
 textreuse
-
 parallel
+```
 
 #### Usage
 
