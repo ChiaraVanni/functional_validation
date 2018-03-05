@@ -13,7 +13,7 @@ cluster_annot <- fread(args[1], stringsAsFactors = F, header = F) %>%
   dplyr::select(rep,memb,partial,pf,clan)
 
 # Pfam terminal (C, N) domains of same proteins
-pfam_shared_term <- read.table("data/pfam_comm_names.txt",
+pfam_shared_term <- read.table("pfam_comm_names.txt",
                                stringsAsFactors = F, header = F) %>% setNames(c("pfam_name","com_name"))
 # Cluster lists
 cluster.list <- split(cluster_annot, list(cluster_annot$rep), drop=TRUE)
