@@ -18,4 +18,6 @@ parallel
 
 #### Usage
 
+```bash
 Rscript eval_shingl_jacc.r "data/pro_pan_gc_annot_cl_all.tsv" "results/pro_pan_gc_func_eval.tsv"
+```
