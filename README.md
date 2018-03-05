@@ -1,6 +1,6 @@
 ## Functional validation
 
-Validation of clusters that has been functionally annotated to Pfam domains
+Validation of clusters annotated to Pfam domains, in terms of intra-cluster functional homogeneity.
 
 #### Scheme of the validation
 
