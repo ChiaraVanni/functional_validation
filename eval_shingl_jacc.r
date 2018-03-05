@@ -1,9 +1,8 @@
 library(tidyverse)
+library(data.table)
 library(proxy)
 library(stringr)
-library(data.table)
 library(textreuse)
-library(vegan)
 library(parallel)
 
 #Subset of annotated clusters
